@@ -1,0 +1,41 @@
+@BASE_URL = http://localhost:3000/
+
+
+
+POST {{BASE_URL}}user/insert
+Content-Type: application/json
+
+{
+    "user_name":"namık",
+    "user_email":"nmk@gmail.com",
+    "user_password":"123456"
+}
+
+###
+GET {{BASE_URL}}user/getall
+
+
+###
+DELETE {{BASE_URL}}user/delete/61d60b5fe5307c0c7a0173e4
+
+
+
+###
+PATCH {{BASE_URL}}user/update/61d60d8697dc80778fa5dfc1
+Content-Type: application/json
+
+{
+    "user_name":"yeni",
+    "user_email":"nmk@gmail.com"
+}
+
+
+//login 
+###
+POST {{BASE_URL}}user/login
+Content-Type: application/json
+
+{
+    "user_email":"nmk@gmail.com",
+    "user_password":"12dd3456"
+}
