@@ -2,24 +2,28 @@
 
 
 
+//insert create
 POST {{BASE_URL}}user/insert
 Content-Type: application/json
 
 {
-    "user_name":"namık",
-    "user_email":"nmk@gmail.com",
+    "user_name":"lisa",
+    "user_email":"lys@gmail.com",
     "user_password":"123456"
 }
 
+// get all
 ###
 GET {{BASE_URL}}user/getall
 
 
+//delete
 ###
 DELETE {{BASE_URL}}user/delete/61d60b5fe5307c0c7a0173e4
 
 
 
+// update
 ###
 PATCH {{BASE_URL}}user/update/61d60d8697dc80778fa5dfc1
 Content-Type: application/json
@@ -39,3 +43,41 @@ Content-Type: application/json
     "user_email":"nmk@gmail.com",
     "user_password":"12dd3456"
 }
+
+
+// music
+###
+POST {{BASE_URL}}music/insert
+Content-Type: application/json
+
+{
+   "music_name":"test3 music name",
+   "music_author":"test3 author",
+   "music_url":"wwww.wwwwdsadasddddd111d"
+}
+
+// get all musics
+###
+GET {{BASE_URL}}music/getall
+
+
+//get one music
+###
+GET {{BASE_URL}}music/61dee8b162ae7dbfd0b0b821
+
+//delete
+###
+DELETE {{BASE_URL}}music/61dee90262ae7dbfd0b0b823
+
+
+// update music
+###
+PATCH {{BASE_URL}}music/patch/61dee94962ae7dbfd0b0b825
+Content-Type: application/json
+
+{
+    "music_name":" updatedmusic name",
+    "music_author":"upd author",
+    "music_url":"wwwgooglew.wwwwdsadasddddd111d"
+}
+

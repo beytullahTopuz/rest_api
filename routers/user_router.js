@@ -4,6 +4,11 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user_model');
 
 
+router.get('/',(req , res) =>{
+    res.json({
+        message: "user's page",
+    });
+});
 
 //? insert user
 router.post('/insert', async (req, res) => {
